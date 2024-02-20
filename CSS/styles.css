@@ -1,0 +1,170 @@
+
+/* colours */
+/* 
+Dark - #3A3335
+Light - #FCFCFC
+Blue - #016FB9
+Red - #DC493A
+*/
+
+
+:root {
+    --bg-light: #FCFCFC;
+    --bg-dark: #3A3335;
+    --txt-light: #FCFCFC;
+    --txt-dark: #3A3335;
+    --primary: #016FB9;
+    --accent: #DC493A;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* id's to easily change the direction
+    of elements within parent */
+#flex-horizontal {
+    display: flex;
+    flex-direction: row;
+}
+
+#flex-vertical {
+    display: flex;
+    flex-direction: column;
+}
+
+
+html {
+    background-color: var(--bg-light);
+}
+
+body {
+    min-height: 100vh;
+}
+
+/* Style for the header */
+.header {
+    background-color: var(--bg-dark);
+    color: var(--txt-light);
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 100px;
+    overflow: hidden;
+
+    /* style for the image loacated
+        within the header */
+   & img {
+    flex: 1;
+   }
+
+    /* Style for the link located within
+        the header */
+   & a {
+    flex: 1;
+    text-align: center;
+    }
+}
+
+/* Styles the 'Book Now' button
+    on the header */
+.header button {
+    all: unset;
+    color: var(--txt-light);
+    background-color: var(--accent);
+    border-radius: 15px;
+    padding: 17px;
+    transition: 0.3s;
+}
+/* Styles the animation of hover 
+    for button */
+.header button:hover {
+    translate: 0 -3px;
+    transition: 0.1s;
+}
+/* defines what happens when button
+    is clicked */
+.header button:active {
+    translate: 0 0px;
+}
+
+/* div contains the ul */
+/* needed to centre all elements
+    in header evenly */
+.header div {
+    width: auto;
+    display: flex;
+    flex: 5;
+    justify-content: space-around;
+}
+
+/* targets list items, links and button
+    in the class header */
+.header li, a, button {
+    text-decoration: none;
+    
+}
+
+/* targets list items in the parent
+    with class header */
+.header li {
+    display: inline-block;
+}
+
+/* targets links within list items
+    with parent with class header */
+.header li a {
+    display: inline-block;
+    color: inherit;
+    padding: 5px;
+}
+
+
+footer {
+    background-color: var(--bg-dark);
+    width: 100vw;
+    height:70px;
+    margin-top: auto;
+}
+
+.prices {
+    justify-content: center;
+
+}
+
+.card {
+    position: absolute;
+    background-color: var(--primary);
+    color: var(--txt-light);
+    border: 2px solid var(--accent);
+    border-radius: 35px;
+    padding: 50px;
+    align-self: center;
+    left: 30%;
+    right: 30%;
+    box-shadow: 0px 10px 5px var(--bg-dark);
+}
+
+.card h2, h3 {
+    text-align: center;
+}
+
+.article {
+    border: 2px solid green;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.article > h2 {
+    border: 2px solid pink;
+}
+
+.left, .right {
+    border: 2px solid orange;
+    flex: 1;
+    text-align: center;
+}
+ 
