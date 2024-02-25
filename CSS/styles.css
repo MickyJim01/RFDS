@@ -14,7 +14,8 @@ Red - #DC493A
     --txt-light: #FCFCFC;
     --txt-dark: #3A3335;
     --primary: #016FB9;
-    --accent: #DC493A;
+    /* --accent: #DC493A; */
+    --accent: #cc3300;
 }
 
 * {
@@ -125,7 +126,7 @@ body {
 footer {
     background-color: var(--bg-dark);
     width: 100vw;
-    height:70px;
+    height:auto;
     margin-top: auto;
 }
 
@@ -138,7 +139,7 @@ footer {
     position: absolute;
     background-color: var(--primary);
     color: var(--txt-light);
-    border: 2px solid var(--accent);
+    /* border: 2px solid var(--accent); */
     border-radius: 35px;
     padding: 50px;
     align-self: center;
@@ -167,4 +168,40 @@ footer {
     flex: 1;
     text-align: center;
 }
- 
+
+
+.prices {
+    text-align: center;
+
+
+}
+
+
+.accolades, .partners, .contacts {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+
+}
+
+.accolades {
+
+
+}
+
+.partners {
+align-items: baseline;
+
+}
+
+.contacts {
+    /* margin-left: 25%;
+    margin-right: 25%; */
+    align-items: center;
+
+}
+
+
+.accent_bg {
+    background-color: var(--accent);
+}
