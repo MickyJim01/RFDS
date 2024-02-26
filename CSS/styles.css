@@ -32,21 +32,24 @@ body {
     min-height: 100vh;
 }
 
+
 header {
     background-color: var(--bg-dark);
+    color: var(--txt-light);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
+    & li {
+        display: inline;
+        margin: 1rem;
+    }
+    
+    & img, button {
+        margin: 0px 30px;
+    }
 }
 
-header li {
-    display: inline;
-    margin: 1rem;
-}
-
-header img, header button {
-    margin: 0px 30px;
-}
 
 footer {
     background-color: var(--bg-dark);
@@ -57,8 +60,29 @@ footer {
 img {
     border: 2px solid yellow;
 }
+button {
+    all: unset;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
 button.booknow {
-    
     background-color: var(--accent);
+    padding: 20px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+header a>button.booknow:hover {
+    transform: translate(0, -3px);
+    transition: 0.1s;
+    text-decoration: underline;
+}
+
+header a>button.booknow:active {
+    transform: translate(0,-1px);
+    transition: 0.1s;
+    color: var(--primary);
 }
